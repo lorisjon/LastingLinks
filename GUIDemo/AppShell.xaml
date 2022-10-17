@@ -10,6 +10,9 @@
         <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
     </FlyoutItem>
     <FlyoutItem Title="Layout">
+        <Tab Title="StackLayout">
+            <ShellContent ContentTemplate="{DataTemplate local:StackLayoutDemo}" />
+        </Tab>
         <Tab Title="Grid">
             <ShellContent ContentTemplate="{DataTemplate local:GridDemo}" />
         </Tab>

@@ -43,9 +43,9 @@
                     Grid.Column="0"
                     Clicked="TexteBearbeiten_Clicked"
                     HorizontalOptions="Center"/>
-            <Button Text="StackLayout Interaktive"
-                    x:Name="StackInteractive"
-                    Clicked="StackInteractive_Clicked"
+            <Button Text="StackLayout"
+                    x:Name="StackLayout"
+                    Clicked="StackLayout_Clicked"
                     FontAttributes="Bold"
                     Grid.Row="1"
                     Grid.Column="1"

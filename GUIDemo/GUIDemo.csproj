@@ -49,6 +49,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Layout\StackLayoutDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Layout\AbsoluteLayoutDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -73,7 +76,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="ShellDemo\" />
+	  <Compile Update="Layout\StackLayoutDemo.xaml.cs">
+	    <DependentUpon>StackLayoutDemo.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 </Project>

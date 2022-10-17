@@ -53,17 +53,6 @@
         <Label Text="(RefreshView not implemented yet)"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"/>
-        <RefreshView IsRefreshing="{Binding IsRefreshing}"
-             Command="{Binding RefreshCommand}">
-            <ScrollView>
-                <FlexLayout Direction="Row"
-                    Wrap="Wrap"
-                    AlignItems="Center"
-                    AlignContent="Center"
-                    BindableLayout.ItemsSource="{Binding Items}"
-                    BindableLayout.ItemTemplate="{StaticResource ColorItemTemplate}" />
-            </ScrollView>
-        </RefreshView>
         <!-- SwipeView -->
         <Label Text="(SwipeView not implemented in Windows yet)"
                    HorizontalOptions="Center"

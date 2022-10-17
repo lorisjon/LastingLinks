@@ -30,9 +30,9 @@ public partial class MainPage : ContentPage
         await Shell.Current.GoToAsync("TexteBearbeiten");
     }
 
-    private async void StackInteractive_Clicked(object sender, EventArgs e)
+    private async void StackLayout_Clicked(object sender, EventArgs e)
     {
-        //await Shell.Current.GoToAsync("GridDemo");
+        await Shell.Current.GoToAsync("StackLayoutDemo");
     }
 
     private async void AbsolutesLayout_Clicked(object sender, EventArgs e)
