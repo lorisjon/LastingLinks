@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GUIDemo.BefehleAusfuehren"
+             Title="BefehleAusfuehren">
+    <StackLayout Orientation="Vertical" 
+                     Spacing="20"
+                     HorizontalOptions="Center">
+        <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center"
+                         WidthRequest="300"
+                         Spacing="5">
+            <Label Text="(Button)"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center"/>
+            <Button Text="Button"
+                    x:Name="NormalButton"
+                    Clicked="NormalButton_Clicked"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center"
+                         WidthRequest="300"
+                         Spacing="5">
+            <Label Text="(ImageButton)"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center"/>
+            <ImageButton Source="bookmark.ico"
+                             x:Name="BildButton"
+                             Clicked="BildButton_Clicked"
+                             HorizontalOptions="Start"
+                             VerticalOptions="Center"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center"
+                         WidthRequest="800"
+                         Spacing="5">
+            <Label Text="(Searchbar)"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center"/>
+            <SearchBar Placeholder="Suchtext..."
+                       x:Name="SuchLeiste"
+                       TextChanged="SuchLeiste_TextChanged"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"
+                       WidthRequest="300"/>
+        </StackLayout>
+        <!-- Not implemented yet windows -->
+        <Label Text="(RefreshView not implemented yet)"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+        <RefreshView IsRefreshing="{Binding IsRefreshing}"
+             Command="{Binding RefreshCommand}">
+            <ScrollView>
+                <FlexLayout Direction="Row"
+                    Wrap="Wrap"
+                    AlignItems="Center"
+                    AlignContent="Center"
+                    BindableLayout.ItemsSource="{Binding Items}"
+                    BindableLayout.ItemTemplate="{StaticResource ColorItemTemplate}" />
+            </ScrollView>
+        </RefreshView>
+        <!-- SwipeView -->
+        <Label Text="(SwipeView not implemented in Windows yet)"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+        <SwipeView
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItem Text="Favorite"
+                       IconImageSource="bookmark.ico"
+                       BackgroundColor="LightGreen"
+                       Invoked="OnFavoriteSwipeItemInvoked" />
+                    <SwipeItem Text="Delete"
+                       IconImageSource="documentprint.ico"
+                       BackgroundColor="LightPink"
+                       Invoked="OnDeleteSwipeItemInvoked" />
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <!-- Content -->
+            <Grid HeightRequest="60"
+          WidthRequest="300"
+          BackgroundColor="LightGray">
+                <Label Text="Swipe right"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            </Grid>
+        </SwipeView>
+    </StackLayout>
+</ContentPage>

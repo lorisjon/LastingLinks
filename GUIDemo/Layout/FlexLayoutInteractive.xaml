@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GUIDemo.FlexLayoutInteractive"
+             Title="FlexLayoutInteractive">
+    <Grid RowDefinitions="50,*">
+        <FlexLayout Grid.Row="0" Direction="Row" AlignItems="Center" JustifyContent="SpaceEvenly" Wrap="NoWrap">
+            <Grid RowDefinitions="auto,auto">
+                <Label Text="Direction" Grid.Row="0"/>
+                <Picker x:Name="piDirection" SelectedIndexChanged="piDirection_SelectedIndexChanged"  Grid.Row="1">
+                    <Picker.Items>
+                        <x:String>Column</x:String>
+                        <x:String>Row</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Grid>
+            <Grid RowDefinitions="auto,auto">
+                <Label Text="Align Content" Grid.Row="0"/>
+                <Picker x:Name="piAlignContent" SelectedIndexChanged="piAlignContent_SelectedIndexChanged"  Grid.Row="1">
+                    <Picker.Items>
+                        <x:String>Center</x:String>
+                        <x:String>End</x:String>
+                        <x:String>SpaceAround</x:String>
+                        <x:String>SpaceBetween</x:String>
+                        <x:String>SpaceEvenly</x:String>
+                        <x:String>Start</x:String>
+                        <x:String>Stretch</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Grid>
+            <Grid RowDefinitions="auto,auto">
+                <Label Text="Justify Content" Grid.Row="0"/>
+                <Picker x:Name="piJustifyContent" SelectedIndexChanged="piJustifyContent_SelectedIndexChanged"  Grid.Row="1">
+                    <Picker.Items>
+                        <x:String>Center</x:String>
+                        <x:String>End</x:String>
+                        <x:String>SpaceAround</x:String>
+                        <x:String>SpaceBetween</x:String>
+                        <x:String>SpaceEvenly</x:String>
+                        <x:String>Start</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Grid>
+            <Grid RowDefinitions="auto,auto">
+                <Label Text="Align Items" Grid.Row="0"/>
+                <Picker x:Name="piAlignItems" SelectedIndexChanged="piAlignItems_SelectedIndexChanged"  Grid.Row="1">
+                    <Picker.Items>
+                        <x:String>Center</x:String>
+                        <x:String>End</x:String>
+                        <x:String>Start</x:String>
+                        <x:String>Stretch</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Grid>
+            <Grid RowDefinitions="auto,auto">
+                <Label Text="Wrap" Grid.Row="0"/>
+                <Picker x:Name="piWrap" SelectedIndexChanged="piWrap_SelectedIndexChanged"  Grid.Row="1">
+                    <Picker.Items>
+                        <x:String>NoWrap</x:String>
+                        <x:String>Reverse</x:String>
+                        <x:String>Wrap</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Grid>
+        </FlexLayout>
+        <FlexLayout x:Name="DemoLayout" Grid.Row="1" Direction="Column" AlignContent="Center" JustifyContent="Center" AlignItems="Center" Wrap="NoWrap">
+            <Button Text="BUTTON" BackgroundColor="Red"/>
+            <Button Text="BUTTON" BackgroundColor="Green"/>
+            <Button Text="BUTTON" BackgroundColor="Blue"/>
+            <Button Text="BUTTON" BackgroundColor="Yellow" TextColor="Black"/>
+            <Button Text="BUTTON" BackgroundColor="Orange"/>
+        </FlexLayout>
+    </Grid>
+</ContentPage>

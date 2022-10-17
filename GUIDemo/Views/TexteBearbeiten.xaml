@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GUIDemo.TexteBearbeiten"
+             Title="TexteBearbeiten">
+    <VerticalStackLayout
+                     Spacing="20"
+                     HorizontalOptions="Center">
+        <HorizontalStackLayout
+                         VerticalOptions="Center"
+                         WidthRequest="600"
+                         HorizontalOptions="Center"
+                         Spacing="5">
+            <Label Text="(Entry)"
+                       VerticalOptions="Center"/>
+            <Entry Placeholder="Einfacher Text..."
+                       VerticalOptions="Center"
+                       WidthRequest="300"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout
+                         VerticalOptions="Center"
+                         WidthRequest="600"
+                         HorizontalOptions="Center"
+                         Spacing="5">
+            <Label Text="(Entry)"
+                       VerticalOptions="Center"/>
+            <Entry x:Name="enValidierung"
+                   TextChanged="enValidierung_TextChanged"
+                Placeholder="Text mit Validierung (nur Zahlen)..."
+                       VerticalOptions="Center"
+                       WidthRequest="300"/>
+            <Label x:Name="lbValidierung"
+                   WidthRequest="20"
+                   BackgroundColor="Red"/>
+        </HorizontalStackLayout>
+        <StackLayout Orientation="Horizontal"
+                         VerticalOptions="Center"
+                         WidthRequest="600"
+                         HorizontalOptions="Center"
+                         Spacing="5">
+            <Label Text="(Entry als Passwort)"
+                       VerticalOptions="Center"/>
+            <Entry IsPassword="True"
+                       VerticalOptions="Center"
+                       WidthRequest="300"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                         VerticalOptions="Center"
+                         WidthRequest="600"
+                         HorizontalOptions="Center"
+                         Spacing="5">
+            <Label Text="(Entry mit L&#246;schknopf)"
+                       VerticalOptions="Center"/>
+            <Entry ClearButtonVisibility="WhileEditing"
+                       VerticalOptions="Center"
+                       WidthRequest="300"/>
+            <!-- Geht nur auf Mobile -->
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                         VerticalOptions="Center"
+                         WidthRequest="600"
+                         HorizontalOptions="Center"
+                         Spacing="5">
+            <Label Text="(Entry mit Tastatur)"
+                       VerticalOptions="Center"/>
+            <Entry Keyboard="Numeric"
+                       VerticalOptions="Center"
+                       WidthRequest="300"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                         VerticalOptions="Center"
+                         WidthRequest="600"
+                         HorizontalOptions="Center"
+                         Spacing="5">
+            <Label Text="(Editor)"
+                       VerticalOptions="Start"/>
+            <Editor VerticalOptions="Center"
+                        WidthRequest="300"
+                        HeightRequest="200"
+                        VerticalTextAlignment="Start"/>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>
