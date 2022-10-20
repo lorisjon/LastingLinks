@@ -37,4 +37,12 @@
             <ShellContent ContentTemplate="{DataTemplate local:WerteSetzen}" />
         </Tab>
     </FlyoutItem>
+    <FlyoutItem Title="Listen">
+        <Tab Title="CollectionView">
+            <ShellContent ContentTemplate="{DataTemplate local:CollectionViewDemo}" />
+        </Tab>
+        <Tab Title="ListView">
+            <ShellContent ContentTemplate="{DataTemplate local:ListViewDemo}" />
+        </Tab>
+    </FlyoutItem>
 </Shell>

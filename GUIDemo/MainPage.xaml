@@ -71,6 +71,20 @@
                     Grid.Row="4"
                     Grid.Column="1"
                     HorizontalOptions="Center"/>
+            <Button Text="CollectionView"
+                    x:Name="CollectionViewDemo"
+                    Clicked="CollectionViewDemo_Clicked"
+                    FontAttributes="Bold"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    HorizontalOptions="Center"/>
+            <Button Text="ListView"
+                    x:Name="ListViewDemo"
+                    Clicked="ListViewDemo_Clicked"
+                    FontAttributes="Bold"
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    HorizontalOptions="Center"/>
         </Grid>
     </ScrollView>
 

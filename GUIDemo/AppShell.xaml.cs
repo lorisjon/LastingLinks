@@ -18,5 +18,8 @@ public partial class AppShell : Shell
         Routing.RegisterRoute("AbsoluteLayoutDemo", typeof(AbsoluteLayoutDemo));
         Routing.RegisterRoute("GridDemo", typeof(GridDemo));
         Routing.RegisterRoute("FlexLayoutInteractive", typeof(FlexLayoutInteractive));
+
+        Routing.RegisterRoute("CollectionViewDemo", typeof(CollectionViewDemo));
+        Routing.RegisterRoute("ListViewDemo", typeof(ListViewDemo));
     }
 }

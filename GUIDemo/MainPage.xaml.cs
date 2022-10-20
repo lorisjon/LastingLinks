@@ -49,5 +49,15 @@ public partial class MainPage : ContentPage
     {
         await Shell.Current.GoToAsync("FlexLayoutInteractive");
     }
+
+    private async void CollectionViewDemo_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("CollectionViewDemo");
+    }
+
+    private async void ListViewDemo_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("ListViewDemo");
+    }
 }
 
