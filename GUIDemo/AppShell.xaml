@@ -44,5 +44,8 @@
         <Tab Title="ListView">
             <ShellContent ContentTemplate="{DataTemplate local:ListViewDemo}" />
         </Tab>
+        <Tab Title="CarouselView">
+            <ShellContent ContentTemplate="{DataTemplate local:CarouselViewDemo}" />
+        </Tab>
     </FlyoutItem>
 </Shell>

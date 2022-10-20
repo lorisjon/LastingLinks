@@ -59,5 +59,10 @@ public partial class MainPage : ContentPage
     {
         await Shell.Current.GoToAsync("ListViewDemo");
     }
+
+    private async void CarouselViewDemo_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("CarouselViewDemo");
+    }
 }
 

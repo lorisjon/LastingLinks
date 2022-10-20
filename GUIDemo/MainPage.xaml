@@ -85,6 +85,13 @@
                     Grid.Row="2"
                     Grid.Column="2"
                     HorizontalOptions="Center"/>
+            <Button Text="CarouselView"
+                    x:Name="CarouselViewDemo"
+                    Clicked="CarouselViewDemo_Clicked"
+                    FontAttributes="Bold"
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    HorizontalOptions="Center"/>
         </Grid>
     </ScrollView>
 

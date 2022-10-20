@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GUIDemo.CarouselViewDemo"
+             Title="CarouselViewDemo">
+    <VerticalStackLayout>
+        <Label 
+            Text="CarouselView"
+            HorizontalOptions="Center" />
+        <Label Text="Das stimmt noch nicht alles..."
+               HorizontalOptions="Center"/>
+        <CarouselView x:Name="carouselView"                       
+                      IndicatorView="indicatorView"
+                        ItemsSource="{Binding Items}"> <!-- Items entspricht der Property im Code behind -->
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <!-- Hier wird die Anzeige eines einzelnen Elements definiert -->
+                    <StackLayout>
+                        <Frame HasShadow="True"
+                           BorderColor="DarkGray"
+                           CornerRadius="5"
+                           Margin="20"
+                           HeightRequest="300"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand">
+                            <StackLayout>
+                                <Label Text="{Binding Name}"
+                                   FontAttributes="Bold"
+                                   FontSize="18"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center" />
+                                <Image Source="{Binding Bild}"
+                                   Aspect="AspectFill"
+                                   HeightRequest="100"
+                                   WidthRequest="100"
+                                   HorizontalOptions="Center" />
+                                <Label Text="{Binding Zahl, StringFormat='Preis: {0:F2}'}"
+                                   HorizontalOptions="Center" />
+                                <Label Text="{Binding Bemerkung}"
+                                   FontAttributes="Italic"
+                                   HorizontalOptions="Center"
+                                   MaxLines="5"
+                                   LineBreakMode="TailTruncation" />
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <!-- ENDE der Definition -->
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView x:Name="indicatorView"
+                   IndicatorColor="LightGray"
+                   SelectedIndicatorColor="DarkGray"
+                   HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
