@@ -33,7 +33,7 @@
         <Tab Title="Texte bearbeiten">
             <ShellContent ContentTemplate="{DataTemplate local:TexteBearbeiten}" />
         </Tab>
-        <Tab Title="Werte setzten">
+        <Tab Title="Werte setzen">
             <ShellContent ContentTemplate="{DataTemplate local:WerteSetzen}" />
         </Tab>
     </FlyoutItem>
