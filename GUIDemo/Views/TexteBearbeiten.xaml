@@ -54,7 +54,6 @@
             <Entry ClearButtonVisibility="WhileEditing"
                        VerticalOptions="Center"
                        WidthRequest="300"/>
-            <!-- Geht nur auf Mobile -->
         </StackLayout>
         <StackLayout Orientation="Horizontal"
                          VerticalOptions="Center"
@@ -66,6 +65,7 @@
             <Entry Keyboard="Numeric"
                        VerticalOptions="Center"
                        WidthRequest="300"/>
+            <!-- Geht nur auf Mobile -->
         </StackLayout>
         <StackLayout Orientation="Horizontal"
                          VerticalOptions="Center"

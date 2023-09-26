@@ -47,8 +47,8 @@
             <DatePicker x:Name="DatumsAuswahl"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            Format="d.M.yyyy"/>
-            <!-- Offen: Korrektes Format Schweiz -->
+                            WidthRequest="200" Format="dd/mm/yyyy"/>
+            <!-- Offen: Korrektes Format Schweiz dd.mm.yyyy  https://github.com/dotnet/maui/issues/10805 -->
         </StackLayout>
         <StackLayout Orientation="Horizontal"
                          VerticalOptions="Center"
