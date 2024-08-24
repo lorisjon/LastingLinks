@@ -1,3 +1,4 @@
+using Microsoft.Maui.Layouts;
 namespace GUIDemo;
 
 public partial class FlexLayoutInteractive : ContentPage

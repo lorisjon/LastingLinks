@@ -7,7 +7,7 @@
         <Label 
             Text="CarouselView"
             HorizontalOptions="Center" />
-        <Label Text="Das stimmt noch nicht alles..."
+        <Label Text="Je nach Plattform unterschiedlich."
                HorizontalOptions="Center"/>
         <CarouselView x:Name="carouselView"                       
                       IndicatorView="indicatorView"
