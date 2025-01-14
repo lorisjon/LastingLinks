@@ -1,27 +1,175 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Shell.NavBarIsVisible="False"
              x:Class="GUIDemo.MainPage">
 
-    <ScrollView>
+    <AbsoluteLayout BackgroundColor="#121212">
+
+        <Button
+            x:Name="LoginBox"
+            AbsoluteLayout.LayoutBounds="0.5, 0.5"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Style="{StaticResource LoginBox}"
+            MinimumWidthRequest="350"
+        />
+
+        <Label 
+               x:Name="Titleloginpage"
+               Text="LastingLinks"
+               AbsoluteLayout.LayoutBounds="0.5, 0.34"
+               AbsoluteLayout.LayoutFlags="PositionProportional"
+               Style="{StaticResource Title}"
+            
+               />
+        
+        <Entry 
+            x:Name="entryUsername"
+            WidthRequest="250"
+            AbsoluteLayout.LayoutBounds="0.5, 0.44"
+             AbsoluteLayout.LayoutFlags="PositionProportional" 
+            ToolTipProperties.Text="max. 10 Zeichen"
+            Placeholder="Username"
+            >
+            
+            <Entry.Behaviors>
+                <toolkit:TextValidationBehavior 
+                InvalidStyle="{StaticResource InvalidEntryStyle}"
+                ValidStyle="{StaticResource ValidEntryStyle}"
+                Flags="ValidateOnValueChanged"
+                MinimumLength="2"
+                MaximumLength="25" />
+            </Entry.Behaviors>
+        </Entry>
+        <Label x:Name="usernameErrormessage" 
+               Text="Username must be between 2 and 25 Characters" FontFamily="Poppins" TextColor="#f56565" FontSize="12"
+                   IsVisible="{Binding Source={x:Reference entryUsername}, Path=Behaviors[0].IsNotValid}"
+               AbsoluteLayout.LayoutBounds="0.69, 0.48"
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+        
+        <!--
+        <Label Text="Good" FontFamily="Poppins" TextColor="{StaticResource Akzent1}" FontSize="12"
+               IsVisible="{Binding Source={x:Reference entryUsername}, Path=Behaviors[0].IsValid}"
+               AbsoluteLayout.LayoutBounds="0.23, 0.47"
+               AbsoluteLayout.LayoutFlags="PositionProportional"/>  -->
+
+        
+        
+        <Entry x:Name="entryPassword"  WidthRequest="250" ToolTipProperties.Text="Bitte Passwort eingeben!"
+                IsPassword="False"
+                Placeholder="Password"
+                AbsoluteLayout.LayoutBounds="0.5, 0.52"
+                AbsoluteLayout.LayoutFlags="PositionProportional" 
+               >
+
+            <Entry.Behaviors>
+                <toolkit:MultiValidationBehavior 
+            InvalidStyle="{StaticResource InvalidEntryStyle}"  
+            ValidStyle="{StaticResource ValidEntryStyle}"
+            Flags="ValidateOnValueChanged">
+
+                    <toolkit:CharactersValidationBehavior 
+                    x:Name="DigitValidation" 
+                    CharacterType="Digit" 
+                    MinimumCharacterTypeCount="1" 
+                    toolkit:MultiValidationBehavior.Error="1 digit" 
+                    RegexPattern="" />
+
+                    <toolkit:CharactersValidationBehavior 
+                    x:Name="UpperValidation" 
+                    CharacterType="UppercaseLetter" 
+                    MinimumCharacterTypeCount="1" 
+                    toolkit:MultiValidationBehavior.Error="1 upper case" 
+                    RegexPattern="" />
+
+                    <toolkit:CharactersValidationBehavior 
+                    x:Name="SymbolValidation" 
+                    CharacterType="NonAlphanumericSymbol" 
+                    MinimumCharacterTypeCount="1" 
+                    toolkit:MultiValidationBehavior.Error="1 symbol" 
+                    RegexPattern=""  />
+
+                    <toolkit:CharactersValidationBehavior 
+                    x:Name="AnyValidation" 
+                    CharacterType="Any" 
+                    MinimumCharacterTypeCount="8" 
+                    toolkit:MultiValidationBehavior.Error="8 characters" 
+                    RegexPattern="" />
+                </toolkit:MultiValidationBehavior>
+            </Entry.Behaviors>
+        </Entry>
+
+        <Label x:Name="passwordErrormessage"
+               Text="Password must be 8+ chars, include a number,"
+               FontFamily="Poppins" TextColor="#f56565" FontSize="12"
+               IsVisible="{Binding Source={x:Reference entryPassword}, Path=Behaviors[0].IsNotValid}"
+               AbsoluteLayout.LayoutBounds="0.62, 0.56"
+               AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        <Label Text="uppercase, lowercase, and special character." 
+        FontFamily="Poppins" TextColor="#f56565" FontSize="12"
+        IsVisible="{Binding Source={x:Reference entryPassword}, Path=Behaviors[0].IsNotValid}"
+        AbsoluteLayout.LayoutBounds="0.59, 0.575"
+        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        <!--
+        <Label Text="The password must be at least 8 characters long" 
+               FontFamily="Poppins" TextColor="#f56565" FontSize="12"
+               IsVisible="{Binding Source={x:Reference entryPassword}, Path=Behaviors[0].IsNotValid}"
+               AbsoluteLayout.LayoutBounds="0., 0.57"
+               AbsoluteLayout.LayoutFlags="PositionProportional"/>        
+        <Label Text="and include a number, a lowercase letter, an uppercase letter, and a special character." 
+               FontFamily="Poppins" TextColor="#f56565" FontSize="12"
+               IsVisible="{Binding Source={x:Reference entryPassword}, Path=Behaviors[0].IsNotValid}"
+               AbsoluteLayout.LayoutBounds="0., 0.585"
+               AbsoluteLayout.LayoutFlags="PositionProportional"/>        
+        <Label Text="and a special character." 
+               FontFamily="Poppins" TextColor="#f56565" FontSize="12"
+               IsVisible="{Binding Source={x:Reference entryPassword}, Path=Behaviors[0].IsNotValid}"
+               AbsoluteLayout.LayoutBounds="0., 0.6"
+               AbsoluteLayout.LayoutFlags="PositionProportional"/> -->
+
+
+        <Button
+       x:Name="Loginbutton"
+       Text="Login"
+       AbsoluteLayout.LayoutBounds="0.5, 0.62"
+       AbsoluteLayout.LayoutFlags="PositionProportional"
+       Clicked="AbsolutesLayout_Clicked"
+       MinimumWidthRequest="250"
+       FontFamily="PoppinsBold"
+       Style="{StaticResource StartMatchingButton}" 
+        />
+    </AbsoluteLayout>
+
+
+    <!--<ScrollView>
+        
+      -->
+        
+     <!--
         <Grid RowSpacing="25"
               RowDefinitions="Auto,Auto,Auto,Auto,Auto,*"
               ColumnDefinitions="Auto,Auto,Auto"
               Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
-            <Label Text="Hello, MAUI!"
+            
+            <Label 
+                x:Name="HomeTitle"
+                   Text="Welcome to LastingLinks"
                    Grid.Row="0"
                    Grid.Column="0"
                    Grid.ColumnSpan="2"
-                   SemanticProperties.HeadingLevel="Level1"
-                   FontSize="Header"
-                   HorizontalOptions="Center"/>
+                   HorizontalOptions="Center"
+                   Style="{StaticResource PageTitle}"/>
+            
             <Button Text="Anzeigen"
                     x:Name="Anzeigen"
                     FontAttributes="Bold"
                     Grid.Row="1"
                     Grid.Column="0"
                     Clicked="Anzeigen_Clicked"
-                    HorizontalOptions="Center"/>
+                    HorizontalOptions="Center"
+                    Style="{StaticResource Button1}"/>
+            
             <Button Text="Befehle ausf&#252;hren"
                     x:Name="BefehleAusfuehren"
                     FontAttributes="Bold"
@@ -93,6 +241,7 @@
                     Grid.Column="2"
                     HorizontalOptions="Center"/>
         </Grid>
-    </ScrollView>
+        --> <!--
+    </ScrollView> -->
 
 </ContentPage>

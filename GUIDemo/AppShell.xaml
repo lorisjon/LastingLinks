@@ -17,7 +17,8 @@
             <ShellContent ContentTemplate="{DataTemplate local:GridDemo}" />
         </Tab>
         <Tab Title="AbsoluteLayout">
-            <ShellContent ContentTemplate="{DataTemplate local:AbsoluteLayoutDemo}" />
+            <ShellContent ContentTemplate="{DataTemplate local:AbsoluteLayoutDemo}"
+             Route="MainPage"/>
         </Tab>
         <Tab Title="FlexLayout">
             <ShellContent ContentTemplate="{DataTemplate local:FlexLayoutInteractive}" />

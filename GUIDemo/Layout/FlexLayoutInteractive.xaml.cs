@@ -1,127 +1,98 @@
 using Microsoft.Maui.Layouts;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 namespace GUIDemo;
 
-public partial class FlexLayoutInteractive : ContentPage
+public partial class FlexLayoutInteractive : ContentPage, INotifyPropertyChanged
 {
-	public FlexLayoutInteractive()
+
+    int count = 0;
+
+
+    private double _sliderValue;
+    public double SliderValue
+    {
+        get => _sliderValue;
+        set
+        {
+            _sliderValue = value;
+            OnPropertyChanged(nameof(SliderValue));
+            OnPropertyChanged(nameof(SliderValueAsInt)); // Aktualisiert Label
+        }
+    }
+
+    public int SliderValueAsInt => (int)Math.Round(_sliderValue);
+
+    public FlexLayoutInteractive()
 	{
 		InitializeComponent();
-        piDirection.SelectedIndex = 0;
-        piAlignContent.SelectedIndex = 0;
-        piJustifyContent.SelectedIndex = 0;
-        piAlignItems.SelectedIndex = 0;
-        piWrap.SelectedIndex = 0;
-    }
-    private void piDirection_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        string state = piDirection.SelectedItem.ToString();
-        if (state == "Row")
-        {
-            DemoLayout.Direction = Microsoft.Maui.Layouts.FlexDirection.Row;
-        }
-        else if (state == "Column")
-        {
-            DemoLayout.Direction = Microsoft.Maui.Layouts.FlexDirection.Column;
-        }
+        //BindingContext = this; // Setzt die aktuelle Seite als BindingContext
     }
 
-    private void piAlignContent_SelectedIndexChanged(object sender, EventArgs e)
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    protected virtual void OnPropertyChanged(string propertyName)
     {
-        string state = piAlignContent.SelectedItem.ToString();
-        if (state == "Center")
-        {
-            DemoLayout.AlignContent = Microsoft.Maui.Layouts.FlexAlignContent.Center;
-        }
-        else if (state == "SpaceEvenly")
-        {
-            DemoLayout.AlignContent = Microsoft.Maui.Layouts.FlexAlignContent.SpaceEvenly;
-        }
-        else if (state == "End")
-        {
-            DemoLayout.AlignContent = Microsoft.Maui.Layouts.FlexAlignContent.End;
-        }
-        else if (state == "SpaceBetween")
-        {
-            DemoLayout.AlignContent = Microsoft.Maui.Layouts.FlexAlignContent.SpaceBetween;
-        }
-        else if (state == "SpaceAround")
-        {
-            DemoLayout.AlignContent = Microsoft.Maui.Layouts.FlexAlignContent.SpaceAround;
-        }
-        else if (state == "Stretch")
-        {
-            DemoLayout.AlignContent = Microsoft.Maui.Layouts.FlexAlignContent.Stretch;
-        }
-        else if (state == "Start")
-        {
-            DemoLayout.AlignContent = Microsoft.Maui.Layouts.FlexAlignContent.Start;
-        }
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
-    private void piJustifyContent_SelectedIndexChanged(object sender, EventArgs e)
+
+
+
+    private async void Anzeigen_Clicked(object sender, EventArgs e)
     {
-        string state = piJustifyContent.SelectedItem.ToString();
-        if (state == "Center")
-        {
-            DemoLayout.JustifyContent = Microsoft.Maui.Layouts.FlexJustify.Center;
-        }
-        else if (state == "SpaceEvenly")
-        {
-            DemoLayout.JustifyContent = Microsoft.Maui.Layouts.FlexJustify.SpaceEvenly;
-        }
-        else if (state == "End")
-        {
-            DemoLayout.JustifyContent = Microsoft.Maui.Layouts.FlexJustify.End;
-        }
-        else if (state == "SpaceBetween")
-        {
-            DemoLayout.JustifyContent = Microsoft.Maui.Layouts.FlexJustify.SpaceBetween;
-        }
-        else if (state == "SpaceAround")
-        {
-            DemoLayout.JustifyContent = Microsoft.Maui.Layouts.FlexJustify.SpaceAround;
-        }
-        else if (state == "Start")
-        {
-            DemoLayout.JustifyContent = Microsoft.Maui.Layouts.FlexJustify.Start;
-        }
+        // WICHTIG: Damit die Navigation so funktioniert müssen die Namen in der Datei AppShell.xaml.cs registriert werden!
+        await Shell.Current.GoToAsync("Anzeigen");
     }
 
-    private void piAlignItems_SelectedIndexChanged(object sender, EventArgs e)
+    private async void BefehleAusfuhren_Clicked(object sender, EventArgs e)
     {
-        string state = piAlignItems.SelectedItem.ToString();
-        if (state == "Center")
-        {
-            DemoLayout.AlignItems = Microsoft.Maui.Layouts.FlexAlignItems.Center;
-        }
-        else if (state == "End")
-        {
-            DemoLayout.AlignItems = Microsoft.Maui.Layouts.FlexAlignItems.End;
-        }
-        else if (state == "Start")
-        {
-            DemoLayout.AlignItems = Microsoft.Maui.Layouts.FlexAlignItems.Start;
-        }
-        else if (state == "Stretch")
-        {
-            DemoLayout.AlignItems = Microsoft.Maui.Layouts.FlexAlignItems.Stretch;
-        }
+        await Shell.Current.GoToAsync("BefehleAusfuehren");
     }
 
-    private void piWrap_SelectedIndexChanged(object sender, EventArgs e)
+    private async void WerteSetzen_Clicked(object sender, EventArgs e)
     {
-        string state = piWrap.SelectedItem.ToString();
-        if (state == "NoWrap")
-        {
-            DemoLayout.Wrap = Microsoft.Maui.Layouts.FlexWrap.NoWrap;
-        }
-        else if (state == "Reverse")
-        {
-            DemoLayout.Wrap = Microsoft.Maui.Layouts.FlexWrap.Reverse;
-        }
-        else if (state == "Wrap")
-        {
-            DemoLayout.Wrap = Microsoft.Maui.Layouts.FlexWrap.Wrap;
-        }
+        await Shell.Current.GoToAsync("WerteSetzen");
     }
+
+    private async void TexteBearbeiten_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("TexteBearbeiten");
+    }
+
+    private async void StackLayout_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("StackLayoutDemo");
+    }
+
+    private async void AbsolutesLayout_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("AbsoluteLayoutDemo");
+    }
+
+    private async void GridDemo_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("GridDemo");
+    }
+
+    private async void FlexLayoutInteractiv_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("FlexLayoutInteractive");
+    }
+
+    private async void CollectionViewDemo_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("CollectionViewDemo");
+    }
+
+    private async void ListViewDemo_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("ListViewDemo");
+    }
+
+    private async void CarouselViewDemo_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("CarouselViewDemo");
+    }
+
 }

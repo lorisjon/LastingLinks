@@ -28,7 +28,7 @@
             <Label Text="(ImageButton)"
                        HorizontalOptions="End"
                        VerticalOptions="Center"/>
-            <ImageButton Source="bookmark.ico"
+            <ImageButton Source="chatbubbleicon.png"
                              x:Name="BildButton"
                              Clicked="BildButton_Clicked"
                              HorizontalOptions="Start"

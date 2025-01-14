@@ -37,7 +37,14 @@ public partial class MainPage : ContentPage
 
     private async void AbsolutesLayout_Clicked(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync("AbsoluteLayoutDemo");
+        if (entryUsername.Text != null && entryPassword.Text != null  && usernameErrormessage.IsVisible != true && passwordErrormessage.IsVisible != true)
+        {
+            await Shell.Current.GoToAsync("AbsoluteLayoutDemo");
+        }
+        else
+        {
+            System.Diagnostics.Debug.WriteLine(entryUsername.Text + entryPassword.Text + usernameErrormessage.IsVisible + passwordErrormessage.IsVisible);
+        }
     }
 
     private async void GridDemo_Clicked(object sender, EventArgs e)

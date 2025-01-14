@@ -1,74 +1,208 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="GUIDemo.FlexLayoutInteractive"
+             Shell.NavBarIsVisible="False"
              Title="FlexLayoutInteractive">
-    <Grid RowDefinitions="50,*">
-        <FlexLayout Grid.Row="0" Direction="Row" AlignItems="Center" JustifyContent="SpaceEvenly" Wrap="NoWrap">
-            <Grid RowDefinitions="auto,auto">
-                <Label Text="Direction" Grid.Row="0"/>
-                <Picker x:Name="piDirection" SelectedIndexChanged="piDirection_SelectedIndexChanged"  Grid.Row="1">
-                    <Picker.Items>
-                        <x:String>Column</x:String>
-                        <x:String>Row</x:String>
-                    </Picker.Items>
-                </Picker>
-            </Grid>
-            <Grid RowDefinitions="auto,auto">
-                <Label Text="Align Content" Grid.Row="0"/>
-                <Picker x:Name="piAlignContent" SelectedIndexChanged="piAlignContent_SelectedIndexChanged"  Grid.Row="1">
-                    <Picker.Items>
-                        <x:String>Center</x:String>
-                        <x:String>End</x:String>
-                        <x:String>SpaceAround</x:String>
-                        <x:String>SpaceBetween</x:String>
-                        <x:String>SpaceEvenly</x:String>
-                        <x:String>Start</x:String>
-                        <x:String>Stretch</x:String>
-                    </Picker.Items>
-                </Picker>
-            </Grid>
-            <Grid RowDefinitions="auto,auto">
-                <Label Text="Justify Content" Grid.Row="0"/>
-                <Picker x:Name="piJustifyContent" SelectedIndexChanged="piJustifyContent_SelectedIndexChanged"  Grid.Row="1">
-                    <Picker.Items>
-                        <x:String>Center</x:String>
-                        <x:String>End</x:String>
-                        <x:String>SpaceAround</x:String>
-                        <x:String>SpaceBetween</x:String>
-                        <x:String>SpaceEvenly</x:String>
-                        <x:String>Start</x:String>
-                    </Picker.Items>
-                </Picker>
-            </Grid>
-            <Grid RowDefinitions="auto,auto">
-                <Label Text="Align Items" Grid.Row="0"/>
-                <Picker x:Name="piAlignItems" SelectedIndexChanged="piAlignItems_SelectedIndexChanged"  Grid.Row="1">
-                    <Picker.Items>
-                        <x:String>Center</x:String>
-                        <x:String>End</x:String>
-                        <x:String>Start</x:String>
-                        <x:String>Stretch</x:String>
-                    </Picker.Items>
-                </Picker>
-            </Grid>
-            <Grid RowDefinitions="auto,auto">
-                <Label Text="Wrap" Grid.Row="0"/>
-                <Picker x:Name="piWrap" SelectedIndexChanged="piWrap_SelectedIndexChanged"  Grid.Row="1">
-                    <Picker.Items>
-                        <x:String>NoWrap</x:String>
-                        <x:String>Reverse</x:String>
-                        <x:String>Wrap</x:String>
-                    </Picker.Items>
-                </Picker>
-            </Grid>
-        </FlexLayout>
-        <FlexLayout x:Name="DemoLayout" Grid.Row="1" Direction="Column" AlignContent="Center" JustifyContent="Center" AlignItems="Center" Wrap="NoWrap">
-            <Button Text="BUTTON" BackgroundColor="Red"/>
-            <Button Text="BUTTON" BackgroundColor="Green"/>
-            <Button Text="BUTTON" BackgroundColor="Blue"/>
-            <Button Text="BUTTON" BackgroundColor="Yellow" TextColor="Black"/>
-            <Button Text="BUTTON" BackgroundColor="Orange"/>
-        </FlexLayout>
-    </Grid>
+    <AbsoluteLayout BackgroundColor="#121212">
+        <Label
+       x:Name="HomeTitle"
+       Text="Edit Profile"
+       AbsoluteLayout.LayoutBounds="0.5, 0"
+       AbsoluteLayout.LayoutFlags="PositionProportional"
+       Style="{StaticResource PageTitle2}" 
+        />
+
+
+
+        <Label
+            x:Name="UsernameLabel"
+            Text="Username:"
+            AbsoluteLayout.LayoutBounds="0, 0.1"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Style="{StaticResource EditProfileLabel}"
+            />
+
+        <Entry 
+    x:Name="entryUsername"
+    WidthRequest="330"
+    AbsoluteLayout.LayoutBounds="0.5, 0.14"
+     AbsoluteLayout.LayoutFlags="PositionProportional" 
+    ToolTipProperties.Text="max. 10 Zeichen"
+    Placeholder="Heinrich"
+    >
+
+            <Entry.Behaviors>
+                <toolkit:TextValidationBehavior 
+        InvalidStyle="{StaticResource InvalidEntryStyle}"
+        ValidStyle="{StaticResource ValidEntryStyle}"
+        Flags="ValidateOnValueChanged"
+        MinimumLength="2"
+        MaximumLength="25" />
+            </Entry.Behaviors>
+        </Entry>
+        <Label x:Name="usernameErrormessage" 
+       Text="must be between 2 and 25 Characters" FontFamily="Poppins" TextColor="#f56565" FontSize="12"
+           IsVisible="{Binding Source={x:Reference entryUsername}, Path=Behaviors[0].IsNotValid}"
+       AbsoluteLayout.LayoutBounds="0.25, 0.19"
+       AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+
+        <Label
+            x:Name="GenderpickLabel"
+            Text="Gender: "
+            AbsoluteLayout.LayoutBounds="0, 0.26"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Style="{StaticResource EditProfileLabel}"
+            />
+
+        <RadioButton
+            Content="Male"
+            AbsoluteLayout.LayoutBounds="0.13, 0.3"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+            IsChecked="True"
+            />
+
+        <RadioButton
+            Content="Female"
+            AbsoluteLayout.LayoutBounds="0.4, 0.3"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            />
+
+        <RadioButton
+            Content="-"
+            AbsoluteLayout.LayoutBounds="0.65, 0.3"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+            />
+
+
+        <Label
+            x:Name="DatepickerLabel"
+            Text="Date of Birth:"
+            AbsoluteLayout.LayoutBounds="0, 0.38"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Style="{StaticResource EditProfileLabel}"
+            />
+
+        <DatePicker
+            x:Name="Datepicker"  
+             AbsoluteLayout.LayoutBounds="0.5, 0.42"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            WidthRequest="330"
+            />
+
+
+        
+        <Label
+            x:Name="SliderLabel"
+            Text="Age: "
+            AbsoluteLayout.LayoutBounds="0, 0.53"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Style="{StaticResource EditProfileLabel}"
+            />
+
+        <Slider 
+            x:Name="AgeSlider"
+            Minimum="0"
+            Maximum="90"
+            Value="{Binding SliderValue, Mode=TwoWay}"
+            AbsoluteLayout.LayoutBounds="0.5, 0.56"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            WidthRequest="330"/>
+
+
+        <Label Text="{Binding SliderValueAsInt}"
+            AbsoluteLayout.LayoutBounds="0.5, 0.59"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            TextColor="{StaticResource Primary}"
+               />
+
+
+        <Label
+            x:Name="PickergenderLabel"
+            Text="Gender of interest: "
+            AbsoluteLayout.LayoutBounds="0, 0.67"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Style="{StaticResource EditProfileLabel}"
+            /> 
+
+        
+        
+        <Picker 
+            x:Name="picker"
+            Title="Select the Gender you're attracted to"
+            WidthRequest="330"
+            AbsoluteLayout.LayoutBounds="0.5, 0.72"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            >
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Male</x:String>
+                    <x:String>Female</x:String>
+                    <x:String>Doesn't matter (bisexual)</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+            
+        </Picker>
+
+        <Label
+        x:Name="InterestsLabel"
+        Text="Interests: "
+        AbsoluteLayout.LayoutBounds="0, 0.81"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        Style="{StaticResource EditProfileLabel}"
+        />
+
+        <Entry 
+        x:Name="entryInterests"
+        WidthRequest="330"
+        AbsoluteLayout.LayoutBounds="0.5, 0.86"
+        AbsoluteLayout.LayoutFlags="PositionProportional" 
+        Text="Guitar, Hiking"/>
+
+
+
+        <Label
+        x:Name="NavBarBottom"
+        AbsoluteLayout.LayoutBounds="0, 1"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        Style="{StaticResource BottomNavbar}"
+        MinimumWidthRequest="415"
+        />
+
+        <ImageButton 
+        x:Name="HomeIcon"
+        Source="houseiconactive.png"
+        AbsoluteLayout.LayoutBounds="0.1, 0.99"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        Clicked="AbsolutesLayout_Clicked"
+ />
+
+        <ImageButton 
+        x:Name="ProfileNavbarIcon"
+        Source="profileIconnav.png"
+        AbsoluteLayout.LayoutBounds="0.36, 0.99"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        Clicked="FlexLayoutInteractiv_Clicked"
+ />
+
+        <ImageButton 
+        x:Name="ChatNavbarIcon"
+        Source="chatbubbleiconnav.png"
+        AbsoluteLayout.LayoutBounds="0.63, 0.99"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        Clicked="AbsolutesLayout_Clicked"
+ />
+
+        <ImageButton 
+        x:Name="SettingsNavbarIcon"
+        Source="settingsicon.png"
+        AbsoluteLayout.LayoutBounds="0.9, 0.99"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        Clicked="CarouselViewDemo_Clicked"
+ />
+
+
+    </AbsoluteLayout>
 </ContentPage>

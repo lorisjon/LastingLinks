@@ -2,14 +2,214 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GUIDemo.AbsoluteLayoutDemo"
+             Shell.NavBarIsVisible="False"
              Title="AbsoluteLayoutDemo">
-    <AbsoluteLayout>
-        <Button Text="Absolut Koordinaten (10,10)"
-                    AbsoluteLayout.LayoutBounds="10,10"/>
-        <!-- Koordinaten nicht auf jedem Gerät gleich! -->
-        <Button Text="Absolut Proportional"
-                    AbsoluteLayout.LayoutBounds="1,1" 
-                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
-        <!-- 1 entspricht 100% -->
+    <AbsoluteLayout BackgroundColor="#121212">
+        <Label
+       x:Name="HomeTitle"
+       Text="Welcome to LastingLinks"
+       AbsoluteLayout.LayoutBounds="0.5, -0.022"
+       AbsoluteLayout.LayoutFlags="PositionProportional"
+       Style="{StaticResource PageTitle}" 
+        />
+
+        <Button
+       x:Name="FindMatchButton"
+       Text="Find Matches"
+       AbsoluteLayout.LayoutBounds="0.5, 0.2"
+       AbsoluteLayout.LayoutFlags="PositionProportional"
+       MinimumWidthRequest="320"
+       Style="{StaticResource FindMatchButton}" 
+        />
+
+        <ImageButton 
+        x:Name="ChatBubbleIcon"
+        Source="chatbubbleicon.png"
+        AbsoluteLayout.LayoutBounds="0.3, 0.297"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        Clicked="AbsolutesLayout_Clicked"
+        />
+
+        <Button
+       x:Name="StartMatchingButton"
+       Text="Start Matching"
+       AbsoluteLayout.LayoutBounds="0.65, 0.29"
+       AbsoluteLayout.LayoutFlags="PositionProportional"
+       Clicked="AbsolutesLayout_Clicked"
+       Style="{StaticResource StartMatchingButton}" 
+        />
+
+        <Button
+x:Name="YourProfileButton"
+Text="Your Profile"
+MinimumWidthRequest="320"
+AbsoluteLayout.LayoutBounds="0.5, 0.6"
+AbsoluteLayout.LayoutFlags="PositionProportional"
+Style="{StaticResource FindMatchButton}" 
+ />
+
+        <ImageButton 
+ x:Name="ProfileIcon"
+ Source="profileicon.png"
+ AbsoluteLayout.LayoutBounds="0.33, 0.63"
+ AbsoluteLayout.LayoutFlags="PositionProportional"
+ Clicked="FlexLayoutInteractiv_Clicked" />
+
+        <Button
+x:Name="EditProfileButton"
+Text="Edit Profile"
+AbsoluteLayout.LayoutBounds="0.65, 0.63"
+AbsoluteLayout.LayoutFlags="PositionProportional"
+Clicked="FlexLayoutInteractiv_Clicked"
+Style="{StaticResource EditProfileButton}" 
+ />
+
+        <Label
+        x:Name="NavBarBottom"
+        AbsoluteLayout.LayoutBounds="0, 1"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        Style="{StaticResource BottomNavbar}"
+        MinimumWidthRequest="415"
+        />
+
+        <ImageButton 
+        x:Name="HomeIcon"
+        Source="houseiconactive.png"
+        AbsoluteLayout.LayoutBounds="0.1, 0.99"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        Clicked="AbsolutesLayout_Clicked"
+ />
+
+        <ImageButton 
+        x:Name="ProfileNavbarIcon"
+        Source="profileIconnav.png"
+        AbsoluteLayout.LayoutBounds="0.36, 0.99"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        Clicked="FlexLayoutInteractiv_Clicked"
+ />
+
+        <ImageButton 
+        x:Name="ChatNavbarIcon"
+        Source="chatbubbleiconnav.png"
+        AbsoluteLayout.LayoutBounds="0.63, 0.99"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        Clicked="AbsolutesLayout_Clicked"
+ />
+
+        <ImageButton 
+        x:Name="SettingsNavbarIcon"
+        Source="settingsicon.png"
+        AbsoluteLayout.LayoutBounds="0.9, 0.99"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        Clicked="CarouselViewDemo_Clicked"
+ />
+
+
     </AbsoluteLayout>
+
+
+    <!--<ScrollView>
+    
+  -->
+
+    <!--
+    <Grid RowSpacing="25"
+          RowDefinitions="Auto,Auto,Auto,Auto,Auto,*"
+          ColumnDefinitions="Auto,Auto,Auto"
+          Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+        
+        <Label 
+            x:Name="HomeTitle"
+               Text="Welcome to LastingLinks"
+               Grid.Row="0"
+               Grid.Column="0"
+               Grid.ColumnSpan="2"
+               HorizontalOptions="Center"
+               Style="{StaticResource PageTitle}"/>
+        
+        <Button Text="Anzeigen"
+                x:Name="Anzeigen"
+                FontAttributes="Bold"
+                Grid.Row="1"
+                Grid.Column="0"
+                Clicked="Anzeigen_Clicked"
+                HorizontalOptions="Center"
+                Style="{StaticResource Button1}"/>
+        
+        <Button Text="Befehle ausf&#252;hren"
+                x:Name="BefehleAusfuehren"
+                FontAttributes="Bold"
+                Grid.Row="2"
+                Grid.Column="0"
+                Clicked="BefehleAusfuhren_Clicked"
+                HorizontalOptions="Center"/>
+        <Button Text="Werte setzen"
+                x:Name="WerteSetzen"
+                FontAttributes="Bold"
+                Grid.Row="3"
+                Grid.Column="0"
+                Clicked="WerteSetzen_Clicked"
+                HorizontalOptions="Center"/>
+        <Button Text="Texte bearbeiten"
+                x:Name="TexteBearbeiten"
+                FontAttributes="Bold"
+                Grid.Row="4"
+                Grid.Column="0"
+                Clicked="TexteBearbeiten_Clicked"
+                HorizontalOptions="Center"/>
+        <Button Text="StackLayout"
+                x:Name="StackLayout"
+                Clicked="StackLayout_Clicked"
+                FontAttributes="Bold"
+                Grid.Row="1"
+                Grid.Column="1"
+                HorizontalOptions="Center"/>
+        <Button Text="FlexLayout Interactive"
+                x:Name="FlexLayoutInteractiv"
+                Clicked="FlexLayoutInteractiv_Clicked"
+                FontAttributes="Bold"
+                Grid.Row="2"
+                Grid.Column="1"
+                HorizontalOptions="Center"/>
+        <Button Text="AbsoluteLayout"
+                x:Name="AbsolutesLayout"
+                Clicked="AbsolutesLayout_Clicked"
+                FontAttributes="Bold"
+                Grid.Row="3"
+                Grid.Column="1"
+                HorizontalOptions="Center"/>
+        <Button Text="Tabelle (Grid)"
+                x:Name="GridDemo"
+                Clicked="GridDemo_Clicked"
+                FontAttributes="Bold"
+                Grid.Row="4"
+                Grid.Column="1"
+                HorizontalOptions="Center"/>
+        <Button Text="CollectionView"
+                x:Name="CollectionViewDemo"
+                Clicked="CollectionViewDemo_Clicked"
+                FontAttributes="Bold"
+                Grid.Row="1"
+                Grid.Column="2"
+                HorizontalOptions="Center"/>
+        <Button Text="ListView"
+                x:Name="ListViewDemo"
+                Clicked="ListViewDemo_Clicked"
+                FontAttributes="Bold"
+                Grid.Row="2"
+                Grid.Column="2"
+                HorizontalOptions="Center"/>
+        <Button Text="CarouselView"
+                x:Name="CarouselViewDemo"
+                Clicked="CarouselViewDemo_Clicked"
+                FontAttributes="Bold"
+                Grid.Row="3"
+                Grid.Column="2"
+                HorizontalOptions="Center"/>
+    </Grid>
+    -->
+    <!--
+        </ScrollView> -->
+    
+    
 </ContentPage>
