@@ -21,9 +21,11 @@ _A personality‑first dating app focused on meaningful conversations, not appea
 - **FAQ page** with 10 answers to common user questions
 
 <img src="assets/info-page.png" width="325" alt="About the app info page"/>
-<img src="assets/faq-page-1.png" width="325" alt="FAQ page part 1"/>
-<img src="assets/faq-page-2.png" width="325" alt="FAQ page part 2"/>
-<img src="assets/faq-page-3.png" width="325" alt="FAQ page part 3"/>
+
+| FAQ Page 1 | FAQ Page 2 | FAQ Page 3 |
+|:----------:|:----------:|:----------:|
+| <img src="assets/faq-page-1.png" width="250" alt="FAQ page part 1"/> | <img src="assets/faq-page-2.png" width="250" alt="FAQ page part 2"/> | <img src="assets/faq-page-3.png" width="250" alt="FAQ page part 3"/> |
+
 
 ---
 
