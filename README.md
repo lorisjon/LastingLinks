@@ -1,7 +1,7 @@
 # Lasting Links 💜  
 _A personality‑first dating app focused on meaningful conversations, not appearances._
 
-![App Demo GIF](assets/demo.gif) <!-- Add your general showcase GIF here -->
+<img src="assets/demo.gif" width="325" alt="App overview demo"/> <!-- General walkthrough GIF -->
 
 ---
 
@@ -12,7 +12,7 @@ _A personality‑first dating app focused on meaningful conversations, not appea
 - Password must include: 8+ chars, uppercase, lowercase, number, special char
 - Error messages appear if validation fails
 
-<img src="assets/login-validation.gif" width="300"/> <!-- Show login + validation -->
+<img src="assets/login-validation.gif" width="325" alt="Login validation with rules"/>
 
 ---
 
@@ -20,9 +20,10 @@ _A personality‑first dating app focused on meaningful conversations, not appea
 - **Info page** with mission statement and app goals
 - **FAQ page** with 10 answers to common user questions
 
-![Info Page](assets/info-page.png) <!-- Screenshot of info page -->
-![FAQ Page (1/2)](assets/faq-page-1.png) <!-- First screenshot of FAQ -->
-![FAQ Page (2/2)](assets/faq-page-2.png) <!-- Optional second part -->
+<img src="assets/info-page.png" width="325" alt="About the app info page"/>
+<img src="assets/faq-page-1.png" width="325" alt="FAQ page part 1"/>
+<img src="assets/faq-page-2.png" width="325" alt="FAQ page part 2"/>
+<img src="assets/faq-page-3.png" width="325" alt="FAQ page part 3"/>
 
 ---
 
@@ -31,7 +32,7 @@ _A personality‑first dating app focused on meaningful conversations, not appea
 - “Your Profile” card (view/edit user profile)
 - Bottom navigation bar with 4 sections
 
-![Home Dashboard](assets/dashboard.png) <!-- Dashboard screenshot -->
+<img src="assets/dashboard.png" width="325" alt="Home dashboard screen"/>
 
 ---
 
@@ -40,7 +41,7 @@ _A personality‑first dating app focused on meaningful conversations, not appea
 - Dropdowns and sliders for intuitive input
 - Save button to confirm profile changes
 
-![Edit Profile](assets/edit-profile.gif) <!-- Show profile editing in action -->
+<img src="assets/edit-profile.gif" width="325" alt="Editing profile in action"/>
 
 ---
 
@@ -49,7 +50,7 @@ _A personality‑first dating app focused on meaningful conversations, not appea
 - See their name, age, and common hobbies
 - Real-time conversation (text only)
 
-![Chat Room](assets/chatroom.gif) <!-- Chat with Emma and messages -->
+<img src="assets/chatroom.gif" width="325" alt="Chat interface with shared interests"/>
 
 ---
 
@@ -58,7 +59,8 @@ _A personality‑first dating app focused on meaningful conversations, not appea
 - Change language (English, German, Spanish)
 - “Changes Saved” feedback with animated toast
 
-![Settings](assets/settings.gif) <!-- Show toggles and save animation -->
+<img src="assets/settings.gif" width="325" alt="Settings screen and success message"/>
+
 
 ---
 
