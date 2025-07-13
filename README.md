@@ -12,7 +12,7 @@ _A personality‑first dating app focused on meaningful conversations, not appea
 - Password must include: 8+ chars, uppercase, lowercase, number, special char
 - Error messages appear if validation fails
 
-![Login Validation](assets/login-validation.gif) <!-- Show login + validation -->
+<img src="assets/login-validation.gif" width="300"/> <!-- Show login + validation -->
 
 ---
 
@@ -70,11 +70,13 @@ _A personality‑first dating app focused on meaningful conversations, not appea
 - Target: iOS (tested on iPhone 13)
 
 **Run locally:**
+
 ```bash
 git clone https://github.com/yourusername/LastingLinks.git
 cd LastingLinks
 # Open LastingLinks.sln in Visual Studio
 # Select iOS simulator and press Run
+```
 
 ---
 
@@ -112,9 +114,14 @@ cd LastingLinks
 
 ### 🎬 Storyboards
 
-| Editing Profile | Getting a Match | Changing Settings |
-|:---------------:|:---------------:|:-----------------:|
-| ![Profile Storyboard](assets/storyboard-profile.gif) | ![Match Storyboard](assets/storyboard-match.gif) | ![Settings Storyboard](assets/storyboard-settings.gif) |
+#### 🧍 Editing Profile
+![Profile Storyboard](assets/storyboard-profile.gif)
+
+#### 💘 Getting a Match
+![Match Storyboard](assets/storyboard-match.gif)
+
+#### ⚙️ Changing Settings
+![Settings Storyboard](assets/storyboard-settings.gif)
 
 
 
@@ -128,7 +135,7 @@ cd LastingLinks
 
 ---
 
-> Made by **Loris-John Schwalberg** as part of a school project.  
+> Made by **Loris Jon Stahlberg** as part of a school project.  
 > _This app was designed to explore user-focused mobile development using .NET MAUI._
 
 
