@@ -76,7 +76,7 @@ _A personality‑first dating app focused on meaningful conversations, not appea
 **Run locally:**
 
 ```bash
-git clone https://github.com/yourusername/LastingLinks.git
+git clone https://github.com/lorisjon/LastingLinks.git
 cd LastingLinks
 # Open LastingLinks.sln in Visual Studio
 # Select iOS simulator and press Run
