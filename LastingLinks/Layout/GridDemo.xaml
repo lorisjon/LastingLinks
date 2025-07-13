@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="GUIDemo.GridDemo"
+             Title="Infopage">
+
+    <AbsoluteLayout BackgroundColor="#121212">
+        <Label
+      x:Name="InfopageTitle"
+      Text="Info Page"
+      AbsoluteLayout.LayoutBounds="0.5, 0"
+      AbsoluteLayout.LayoutFlags="PositionProportional"
+      Style="{StaticResource PageTitle2}" 
+       />
+
+        <Label
+      Text="About our App"
+      AbsoluteLayout.LayoutBounds="0.5, 0.1"
+      AbsoluteLayout.LayoutFlags="PositionProportional"
+      Style="{StaticResource PageTitle2}" 
+      FontSize="20"
+      FontFamily="LoraBold"
+      />
+
+        <ScrollView
+                AbsoluteLayout.LayoutBounds="0.65, 0.25"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                HeightRequest="300"
+                WidthRequest="350"
+            >
+            <Label
+                Text="Welcome to LastingLinks, the dating app that prioritizes personality over appearances.
+Our mission is to create meaningful and long-lasting relationships by focusing on authentic connections rather than superficial swipes."
+                FontSize="15"
+                FontFamily="Lora"
+                LineHeight="1.3"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="StartAndExpand"
+                />
+        </ScrollView>
+
+        <Label
+      Text="How it works:"
+      AbsoluteLayout.LayoutBounds="0.5, 0.4"
+      AbsoluteLayout.LayoutFlags="PositionProportional"
+      Style="{StaticResource PageTitle2}" 
+      FontSize="18"
+      FontFamily="Lora"
+      TextColor="{StaticResource Akzent1}"
+      />
+
+        <ScrollView
+                AbsoluteLayout.LayoutBounds="0.65, 0.62"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                HeightRequest="240"
+                WidthRequest="350">
+            <CollectionView>
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Discover Real Connections: Enter chatrooms based on shared interests and get to know people genuinely.</x:String>
+                        <x:String>Match with Meaning: Engage in conversations and decide if you want to continue the journey together.</x:String>
+                        <x:String>Personality First: Your interests and values take center stage in finding the right match.</x:String>
+                    </x:Array>
+                </CollectionView.ItemsSource>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" Spacing="10" Padding="10">
+                            <Label Text="•" TextColor="#9f7aea" FontSize="15" 
+                       FontFamily="Lora" VerticalOptions="Start" 
+                                   />
+
+                            <Label Text="{Binding}" 
+                       FontSize="15"
+                       FontFamily="Lora"
+                       LineBreakMode="WordWrap" 
+                       HorizontalOptions="StartAndExpand" 
+                       VerticalOptions="Start" />
+                        </StackLayout>
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+
+        <ScrollView
+                AbsoluteLayout.LayoutBounds="0.65, 0.8"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                HeightRequest="75"
+                WidthRequest="350"
+            >
+            <Label
+                Text="Join LastingLinks today and experience a refreshing approach to online dating—where meaningful relationships truly begin."
+                FontSize="15"
+                FontFamily="Lora"
+                LineHeight="1.2"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="StartAndExpand"
+                />
+        </ScrollView>
+
+        <Label
+      Text="Author"
+      AbsoluteLayout.LayoutBounds="0.5, 0.85"
+      AbsoluteLayout.LayoutFlags="PositionProportional"
+      Style="{StaticResource PageTitle2}" 
+      FontSize="18"
+      FontFamily="Lora"
+      TextColor="{StaticResource Akzent1}"
+      />
+
+        <Label
+                Text="Made by Loris Jon Stahlberg, as a school project"
+                FontSize="15"
+                FontFamily="Lora"
+                LineHeight="1.2"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="StartAndExpand"
+                  AbsoluteLayout.LayoutBounds="0.5, 0.88"
+      AbsoluteLayout.LayoutFlags="PositionProportional"
+                />
+
+        <Label
+      Text="Version"
+      AbsoluteLayout.LayoutBounds="0.5, 0.93"
+      AbsoluteLayout.LayoutFlags="PositionProportional"
+      Style="{StaticResource PageTitle2}" 
+      FontSize="18"
+      FontFamily="Lora"
+      TextColor="{StaticResource Akzent1}"
+      />
+
+        <Label
+                Text="Version 1.0"
+                FontSize="15"
+                FontFamily="Lora"
+                LineHeight="1.2"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="StartAndExpand"
+                  AbsoluteLayout.LayoutBounds="0.5, 0.96"
+      AbsoluteLayout.LayoutFlags="PositionProportional"
+                />
+
+
+
+
+
+
+
+
+
+    </AbsoluteLayout>
+</ContentPage>

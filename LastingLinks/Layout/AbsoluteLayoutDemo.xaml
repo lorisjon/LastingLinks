@@ -27,7 +27,7 @@
         Source="chatbubbleicon.png"
         AbsoluteLayout.LayoutBounds="0.3, 0.297"
         AbsoluteLayout.LayoutFlags="PositionProportional"
-        Clicked="AbsolutesLayout_Clicked"
+        Clicked="Anzeigen_Clicked"
         />
 
         <Button
@@ -35,7 +35,7 @@
        Text="Start Matching"
        AbsoluteLayout.LayoutBounds="0.65, 0.29"
        AbsoluteLayout.LayoutFlags="PositionProportional"
-       Clicked="AbsolutesLayout_Clicked"
+       Clicked="Anzeigen_Clicked"
        Style="{StaticResource StartMatchingButton}" 
         />
 
@@ -93,7 +93,7 @@ Style="{StaticResource EditProfileButton}"
         Source="chatbubbleiconnav.png"
         AbsoluteLayout.LayoutBounds="0.63, 0.99"
         AbsoluteLayout.LayoutFlags="PositionProportional"
-        Clicked="AbsolutesLayout_Clicked"
+        Clicked="Anzeigen_Clicked"
  />
 
         <ImageButton 
@@ -101,7 +101,7 @@ Style="{StaticResource EditProfileButton}"
         Source="settingsicon.png"
         AbsoluteLayout.LayoutBounds="0.9, 0.99"
         AbsoluteLayout.LayoutFlags="PositionProportional"
-        Clicked="CarouselViewDemo_Clicked"
+        Clicked="BefehleAusfuhren_Clicked"
  />
 
 

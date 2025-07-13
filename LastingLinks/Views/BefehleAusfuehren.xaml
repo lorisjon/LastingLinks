@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="GUIDemo.BefehleAusfuehren"
+              Shell.NavBarIsVisible="False"
+             Title="BefehleAusfuehren">
+    
+    <AbsoluteLayout BackgroundColor="#121212">
+        <Label
+      x:Name="SettingsTitle"
+      Text="Settings"
+      AbsoluteLayout.LayoutBounds="0.5, 0.05"
+      AbsoluteLayout.LayoutFlags="PositionProportional"
+      Style="{StaticResource PageTitle2}" 
+       />
+
+
+
+
+
+        <Label
+           x:Name="NotificationPickerLabel"
+           Text="Notifications:"
+           AbsoluteLayout.LayoutBounds="0, 0.2"
+           AbsoluteLayout.LayoutFlags="PositionProportional"
+           Style="{StaticResource EditProfileLabel}"
+           />
+
+
+        <Picker 
+           x:Name="NotificationsPicker"
+           Title="Choose if you'd like to receive notifications"
+           WidthRequest="330"
+           AbsoluteLayout.LayoutBounds="0.5, 0.24"
+           AbsoluteLayout.LayoutFlags="PositionProportional"
+           >
+
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>On</x:String>
+                    <x:String>Off</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+
+        </Picker>
+        
+        <Label
+           x:Name="LanguagePickerLabel"
+           Text="Language: "
+           AbsoluteLayout.LayoutBounds="0, 0.35"
+           AbsoluteLayout.LayoutFlags="PositionProportional"
+           Style="{StaticResource EditProfileLabel}"
+           />
+
+
+        <Picker 
+           x:Name="LanguagePicker"
+           Title="Choose Language"
+           WidthRequest="330"
+           AbsoluteLayout.LayoutBounds="0.5, 0.39"
+           AbsoluteLayout.LayoutFlags="PositionProportional"
+           >
+
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>English</x:String>
+                    <x:String>German</x:String>
+                    <x:String>Spanish</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+
+        </Picker>
+
+        <Button
+    x:Name="SaveChangesButton"
+    Text="Save Changes"
+    AbsoluteLayout.LayoutBounds="0.5, 0.5"
+    AbsoluteLayout.LayoutFlags="PositionProportional" 
+    Style="{StaticResource StartMatchingButton}"
+    FontFamily="PoppinsBold"
+    WidthRequest="250"
+    Clicked="SaveChangesButton_Clicked"
+    />
+
+        <Label
+            x:Name="changessavedlabel"
+            Text="Changes Saved"
+            TextColor="{StaticResource Akzent1}"
+                AbsoluteLayout.LayoutBounds="0.15, 0.6"
+    AbsoluteLayout.LayoutFlags="PositionProportional" 
+            FontFamily="PoppinsBold"
+            FontSize="18"
+            IsVisible="False"
+            />
+
+
+        <Label
+       x:Name="NavBarBottom"
+       AbsoluteLayout.LayoutBounds="0, 1"
+       AbsoluteLayout.LayoutFlags="PositionProportional"
+       Style="{StaticResource BottomNavbar}"
+       MinimumWidthRequest="415"
+       />
+
+        <ImageButton 
+       x:Name="HomeIcon"
+       Source="houseicon.png"
+       AbsoluteLayout.LayoutBounds="0.1, 0.99"
+       AbsoluteLayout.LayoutFlags="PositionProportional"
+       Clicked="AbsolutesLayout_Clicked"
+/>
+
+        <ImageButton 
+       x:Name="ProfileNavbarIcon"
+       Source="profileIconnav.png"
+       AbsoluteLayout.LayoutBounds="0.36, 0.99"
+       AbsoluteLayout.LayoutFlags="PositionProportional"
+       Clicked="FlexLayoutInteractiv_Clicked"
+/>
+
+        <ImageButton 
+       x:Name="ChatNavbarIcon"
+       Source="chatbubbleiconnav.png"
+       AbsoluteLayout.LayoutBounds="0.63, 0.99"
+       AbsoluteLayout.LayoutFlags="PositionProportional"
+       Clicked="Anzeigen_Clicked"
+/>
+
+        <ImageButton 
+       x:Name="SettingsNavbarIcon"
+       Source="settingsiconactive.png"
+       AbsoluteLayout.LayoutBounds="0.9, 0.99"
+       AbsoluteLayout.LayoutFlags="PositionProportional"
+       Clicked="BefehleAusfuhren_Clicked"
+/>
+
+
+    </AbsoluteLayout>
+</ContentPage>

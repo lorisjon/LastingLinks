@@ -145,6 +145,28 @@
             </VisualStateGroupList>
         </Setter>
     </Style>
+    
+<Style x:Key="SendButton" TargetType="Button">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Textfarbe}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Akzent1}, Dark={StaticResource Akzent1}}" />
+        <Setter Property="FontFamily" Value="Poppins"/>
+        <Setter Property="FontSize" Value="19"/>
+        <Setter Property="CornerRadius" Value="17"/>
+        <Setter Property="Padding" Value="20, 6, 20, 4"/>
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray200}}" />
+                            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray600}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
 
 
     <Style TargetType="CheckBox">
@@ -220,6 +242,27 @@
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
+    </Style>  
+    
+    <Style x:Key="Chatentry" TargetType="Entry">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Textfarbe}, Dark={StaticResource Textfarbe}}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Hervorhebung}" />
+        <Setter Property="FontFamily" Value="Poppins"/>
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Margin" Value="25, 0, 0, 0"/>
+        <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource Placeholdertextfarbe}, Dark={StaticResource Placeholdertextfarbe}}" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray600}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
     </Style>
 
     <Style TargetType="Frame">
@@ -264,6 +307,17 @@
             </VisualStateGroupList>
         </Setter>
     </Style>
+
+    <Style x:Key="OutgoingText" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Hervorhebung}" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="FontFamily" Value="Lora"/>
+        <Setter Property="Margin" Value="0, 0, 25, 0" />
+    </Style>
+
+
 
     <Style x:Key="EditProfileLabel" TargetType="Label">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Textfarbe}, Dark={StaticResource Textfarbe}}" />
@@ -324,6 +378,48 @@
         </Setter>
     </Style>
 
+    <Style x:Key="PageTitle3" TargetType="Label">
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="FontFamily" Value="LoraBold" />
+        <Setter Property="FontSize" Value="31" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}"/>
+        <Setter Property="Padding" Value="0, 0, 0, 50" />
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray600}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style x:Key="PageTitle3-2" TargetType="Button">
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="FontFamily" Value="LoraBold" />
+        <Setter Property="FontSize" Value="31" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}"/>
+        <Setter Property="Padding" Value="0, 5, 0, 45" />
+        <Setter Property="CornerRadius" Value="20"/>
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray600}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
     <Style x:Key="LoginBox" TargetType="Button">
             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Textfarbe}}" />
             <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Hervorhebung}, Dark={StaticResource Hervorhebung}}" />
@@ -360,6 +456,72 @@
                         <VisualState.Setters>
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray200}}" />
                             <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray600}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SharedInterests" TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Akzent1}, Dark={StaticResource Akzent1}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Hervorhebung2}, Dark={StaticResource Hervorhebung2}}" />
+        <Setter Property="FontFamily" Value="Poppins"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Padding" Value="0, 10"/>
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray200}}" />
+                            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray600}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style x:Key="Chatbubbleincoming" TargetType="Button">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Textfarbe}, Dark={StaticResource Textfarbe}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}" />
+        <Setter Property="FontFamily" Value="Lora"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="CornerRadius" Value="13"/>
+        <Setter Property="Padding" Value="0, 10"/>
+        <Setter Property="Margin" Value="25, 0, 0, 0"/>
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray200}}" />
+                            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray600}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style x:Key="IncomingText" TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Textfarbe}, Dark={StaticResource Textfarbe}}" />
+        <Setter Property="FontFamily" Value="Lora" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Padding" Value="0, 10"/>
+        <Setter Property="Margin" Value="37, 0, 0, 0"/>
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray600}}" />
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>

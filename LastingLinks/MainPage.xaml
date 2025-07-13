@@ -139,6 +139,33 @@
        FontFamily="PoppinsBold"
        Style="{StaticResource StartMatchingButton}" 
         />
+
+        <ImageButton 
+        x:Name="IInfoIcon"
+        Source="infoicon.png"
+        AbsoluteLayout.LayoutBounds="0.2, 0.75"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        Clicked="GridDemo_Clicked" />
+
+        <Label
+             Text="Infopage"
+             AbsoluteLayout.LayoutBounds="0.2, 0.8"
+             AbsoluteLayout.LayoutFlags="PositionProportional"
+            />
+
+        <ImageButton 
+        x:Name="Questionmark"
+        Source="questionmarkicon.png"
+        AbsoluteLayout.LayoutBounds="0.78, 0.75"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        Clicked="StackLayout_Clicked" />
+        
+        <Label
+        Text="FAQ"
+        AbsoluteLayout.LayoutBounds="0.78, 0.8"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+       />
+
     </AbsoluteLayout>
 
 

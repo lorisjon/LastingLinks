@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GUIDemo.Anzeigen"
+             Title="Chatroom"
+             Shell.NavBarIsVisible="False">
+    <AbsoluteLayout x:Name="ChatLayout" BackgroundColor="#121212">
+        <Button
+       x:Name="HomeTitle"
+       Text="Chat with Emma"
+       AbsoluteLayout.LayoutBounds="0.5, -0.023"
+       AbsoluteLayout.LayoutFlags="PositionProportional"
+       Style="{StaticResource PageTitle3-2}" 
+       WidthRequest="411"
+       FontSize="35"
+        />
+
+        <Label
+            x:Name="AgeLabel"
+            Text="Age: 25"
+            FontSize="16"
+            AbsoluteLayout.LayoutBounds="0.5, 0.06"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            />
+
+        <Label
+            Text="Shared Interests: Guitar, Hiking"
+            Style="{StaticResource SharedInterests}"
+            WidthRequest="360"
+            AbsoluteLayout.LayoutBounds="0.5, 0.13"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            />
+
+        <Button
+            x:Name="IncomingMessageBubble1"
+            Style="{StaticResource Chatbubbleincoming}"
+            AbsoluteLayout.LayoutBounds="0.0, 0.23"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            WidthRequest="270"
+            IsVisible="True"
+            />
+
+        <Label
+            x:Name="IncomingMessageText1"
+            Text="Hey! How’s it going?"
+            AbsoluteLayout.LayoutBounds="0.0, 0.23"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Style="{StaticResource IncomingText}"
+            IsVisible="True"
+            />
+
+        <StackLayout
+            x:Name="MessagesContainer"
+            AbsoluteLayout.LayoutBounds="0, 0.3, 1, 0.6"
+            AbsoluteLayout.LayoutFlags="All"
+            Padding="10"
+            Spacing="10">
+        </StackLayout>
+
+        <!-- Eingabefeld und Schaltfläche -->
+        <Entry
+            x:Name="MessageEntry"
+            Placeholder="Type a message..."
+            AbsoluteLayout.LayoutBounds="0, 0.9"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            WidthRequest="260"
+            Style="{StaticResource Chatentry}" />
+
+        <Button 
+    x:Name="SendButton"
+    Text="Send"
+    AbsoluteLayout.LayoutBounds="0.95, 0.9"
+    AbsoluteLayout.LayoutFlags="PositionProportional"
+    Style="{StaticResource SendButton}"
+    Clicked="SendButton_Clicked" />
+
+
+        <Label
+        x:Name="NavBarBottom"
+        AbsoluteLayout.LayoutBounds="0, 1"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        Style="{StaticResource BottomNavbar}"
+        MinimumWidthRequest="415"
+        />
+
+        <ImageButton 
+        x:Name="HomeIcon"
+        Source="houseicon.png"
+        AbsoluteLayout.LayoutBounds="0.1, 0.99"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        Clicked="AbsolutesLayout_Clicked"
+ />
+
+        <ImageButton 
+        x:Name="ProfileNavbarIcon"
+        Source="profileIconnav.png"
+        AbsoluteLayout.LayoutBounds="0.36, 0.99"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        Clicked="FlexLayoutInteractiv_Clicked"
+ />
+
+        <ImageButton 
+        x:Name="ChatNavbarIcon"
+        Source="chatbubbleiconnavactive.png"
+        AbsoluteLayout.LayoutBounds="0.63, 0.99"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        Clicked="Anzeigen_Clicked"
+ />
+
+        <ImageButton 
+        x:Name="SettingsNavbarIcon"
+        Source="settingsicon.png"
+        AbsoluteLayout.LayoutBounds="0.9, 0.99"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        Clicked="BefehleAusfuhren_Clicked"
+ />
+
+
+    </AbsoluteLayout>
+</ContentPage>

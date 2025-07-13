@@ -29,6 +29,8 @@ public partial class FlexLayoutInteractive : ContentPage, INotifyPropertyChanged
         BindingContext = this; // Setzt die aktuelle Seite als BindingContext
     }
 
+
+
     public event PropertyChangedEventHandler PropertyChanged;
 
     protected virtual void OnPropertyChanged(string propertyName)
