@@ -12,7 +12,7 @@ _A personality‑first dating app focused on meaningful conversations, not appea
 - Password must include: 8+ chars, uppercase, lowercase, number, special char
 - Error messages appear if validation fails
 
-<img src="assets/login-validation.gif" width="400"/> <!-- Show login + validation -->
+<img src="assets/login-validation.gif" width="350"/> <!-- Show login + validation -->
 
 ---
 
