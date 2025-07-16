@@ -7,7 +7,7 @@ _A personality‑first dating app focused on meaningful conversations, not appea
 
 ## ✨ Key Features
 
-### ✅ Secure Login
+### ✅ Login
 - Validates username (2–25 chars)
 - Password must include: 8+ chars, uppercase, lowercase, number, special char
 - Error messages appear if validation fails
