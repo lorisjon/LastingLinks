@@ -1,3 +1,10 @@
+![C#](https://img.shields.io/badge/C%23-9f7aea?style=for-the-badge&logo=csharp&logoColor=white)
+![XAML](https://img.shields.io/badge/XAML-38bdf8?style=for-the-badge)
+![Mobile](https://img.shields.io/badge/Mobile-388E3C?style=for-the-badge)
+![.NET_MAUI](https://img.shields.io/badge/.NET_MAUI-9f7aea?style=for-the-badge&logo=dotnet&logoColor=white)
+
+
+
 # Lasting Links 💜  
 _A personality‑first dating app focused on meaningful conversations, not appearances._
 
