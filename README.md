@@ -12,9 +12,9 @@ _A personality‑first dating app focused on meaningful conversations, not appea
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### ✅ Login
+### Login
 - Validates username (2–25 chars)
 - Password must include: 8+ chars, uppercase, lowercase, number, special char
 - Error messages appear if validation fails
@@ -23,7 +23,7 @@ _A personality‑first dating app focused on meaningful conversations, not appea
 
 ---
 
-### ❓ Info & FAQ
+### Info & FAQ
 - **Info page** with mission statement and app goals
 - **FAQ page** with 10 answers to common user questions
 
@@ -36,7 +36,7 @@ _A personality‑first dating app focused on meaningful conversations, not appea
 
 ---
 
-### 🏠 Home Dashboard
+### Home Dashboard
 - “Find Matches” card (start matching or enter chat)
 - “Your Profile” card (view/edit user profile)
 - Bottom navigation bar with 4 sections
@@ -45,7 +45,7 @@ _A personality‑first dating app focused on meaningful conversations, not appea
 
 ---
 
-### 🧍 Edit Profile
+### Edit Profile
 - Edit username, birthdate, age range, gender, interests
 - Dropdowns and sliders for intuitive input
 - Save button to confirm profile changes
@@ -54,7 +54,7 @@ _A personality‑first dating app focused on meaningful conversations, not appea
 
 ---
 
-### 💬 Chat Room
+### Chat Room
 - Match with someone who shares your interests
 - See their name, age, and common hobbies
 - Real-time conversation (text only)
@@ -91,7 +91,7 @@ cd LastingLinks
 
 ---
 
-## 🎨 Design Philosophy
+## Design Philosophy
 
 - **Dark UI** keeps focus on conversation and adds intimacy  
 - **Violet accents** represent emotion & romantic tone  
@@ -101,9 +101,9 @@ cd LastingLinks
 
 ---
 
-## 📂 Mockups & Storyboards
+## Mockups & Storyboards
 
-### 🧩 UI Mockups
+### UI Mockups
 
 | Login Screen | Dashboard | Edit Profile |
 |:------------:|:---------:|:------------:|
