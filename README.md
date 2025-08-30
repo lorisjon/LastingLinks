@@ -115,7 +115,7 @@ cd LastingLinks
 
 ---
 
-### 🖼️ FAQ Screenshots
+### FAQ Screenshots
 
 | FAQ Page 1 | FAQ Page 2 | FAQ Page 3 |
 |:----------:|:----------:|:----------:|
@@ -123,22 +123,22 @@ cd LastingLinks
 
 ---
 
-### 🎬 Storyboards
+### Storyboards
 
-#### 🧍 Editing Profile
+#### Editing Profile
 ![Profile Storyboard](assets/storyboard-profile.gif)
 
-#### 💘 Getting a Match
+#### Getting a Match
 ![Match Storyboard](assets/storyboard-match.gif)
 
-#### ⚙️ Changing Settings
+#### Changing Settings
 ![Settings Storyboard](assets/storyboard-settings.gif)
 
 
 
 ---
 
-## 🚀 Next Steps
+## Next Steps
 
 - Add cloud-based user accounts  
 - Improve profile data persistence  
